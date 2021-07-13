@@ -25,7 +25,9 @@
       </div>
       <div class="media-content">
         <div class="content">
-          <strong>Angel</strong><br />
+          <% if user_signed_in? %>
+            <strong><%= User.find(post.user_id).username %></strong><br/>
+          <% end %>
           <p><%= post.post %></p>
         </div>
       </div>

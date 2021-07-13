@@ -1,8 +1,10 @@
 <%= simple_form_for(@post) do |f| %>
 <%= f.error_notification %>
+<small> Current User loged-in - <%= current_user.username %></small>
 <div class="field">
   <div class="control">
     <%= f.input :post, label: "Post about it", input_html: { class: "textarea " }, wrapper: false, label_html: {class: "label"}, placeholder: "Compose a new post...", autofocus: true %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 </div>
 <%= f.button :submit, class: "button is-info" %>
