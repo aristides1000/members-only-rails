@@ -1,0 +1,30 @@
+<div class="column is-half">
+  <article class="media box">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src="http://placehold.it/64x64" alt="64x64">
+      </p>
+    </figure>
+    <div class="media-content">
+
+    </div>
+  </article>
+
+<% @posts.each do | post | %>
+  <div class="box">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="http://placehold.it/64x64" alt="64x64">
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <strong>Angel</strong><br />
+          <p><%= post.post %></p>
+        </div>
+      </div>
+    </article>
+  </div>
+<% end %>
+</div>
