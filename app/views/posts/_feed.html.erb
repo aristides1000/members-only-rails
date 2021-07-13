@@ -5,10 +5,15 @@
         <img src="http://placehold.it/64x64" alt="64x64">
       </p>
     </figure>
-    <div class="media-content">
-      <%= render 'posts/form' %>
-    </div>
   </article>
+
+  <div class="media-content">
+    <% if user_signed_in? %> 
+      <%= render 'posts/form' %>
+    <% else %>
+      <%= link_to "Create a new Post", new_post_path %>
+    <% end %> 
+  </div>
 
 <% @posts.each do | post | %>
   <div class="box">
