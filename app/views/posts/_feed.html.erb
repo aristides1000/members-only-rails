@@ -1,28 +1,15 @@
 <div class="column is-half">
-  <article class="media box">
-    <figure class="media-left">
-      <p class="image is-64x64">
-        <img src="http://placehold.it/64x64" alt="64x64">
-      </p>
-    </figure>
-  </article>
-
   <div class="media-content">
     <% if user_signed_in? %> 
       <%= render 'posts/form' %>
     <% else %>
       <strong class="control"> <%= link_to "Create a new Post", new_post_path %><strong><br/><br/>
     <% end %> 
-  </div>
+  </div><br/>
 
 <% @posts.each do | post | %>
   <div class="box">
     <article class="media">
-      <div class="media-left">
-        <figure class="image is-64x64">
-          <img src="http://placehold.it/64x64" alt="64x64">
-        </figure>
-      </div>
       <div class="media-content">
         <div class="content">
           <% if user_signed_in? %>
