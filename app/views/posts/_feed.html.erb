@@ -1,0 +1,24 @@
+<div class="column is-half">
+  <div class="media-content">
+    <% if user_signed_in? %> 
+      <%= render 'posts/form' %>
+    <% else %>
+      <strong class="control"> <%= link_to "Create a new Post", new_post_path %><strong><br/><br/>
+    <% end %> 
+  </div><br/>
+
+<% @posts.each do | post | %>
+  <div class="box">
+    <article class="media">
+      <div class="media-content">
+        <div class="content">
+          <% if user_signed_in? %>
+            <strong><%= User.find(post.user_id).username %></strong><br/>
+          <% end %>
+          <p><%= post.post %></p>
+        </div>
+      </div>
+    </article>
+  </div>
+<% end %>
+</div>
