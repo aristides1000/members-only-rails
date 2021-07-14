@@ -11,7 +11,7 @@
     <% if user_signed_in? %> 
       <%= render 'posts/form' %>
     <% else %>
-      <%= link_to "Create a new Post", new_post_path %>
+      <strong class="control"> <%= link_to "Create a new Post", new_post_path %><strong><br/><br/>
     <% end %> 
   </div>
 
