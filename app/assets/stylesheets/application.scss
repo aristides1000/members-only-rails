@@ -14,11 +14,12 @@
  *= require_self
  */
 
- // round images
- @import 'bulma';
+// round images
+@import 'bulma';
 
 .image {
   border-radius: 50%;
+
   img {
     border-radius: 50%;
   }
